@@ -6,6 +6,7 @@ import {configureStore} from "@reduxjs/toolkit";
 import {Provider} from "react-redux";
 
 import productsReducer, { productsFetch } from './features/productsSlice';
+
 import { productsApi } from './features/productsApi';
 import cartReducer, { getTotals } from './features/cartSlice';
 

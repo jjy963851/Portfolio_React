@@ -1,22 +1,17 @@
-const express = require("express")
-const cors = require("cors")
+const express = require("express");
+const functions = require('firebase-functions');
+const products = require("./products");
 
-const products = require("./products")
+const app = express();
 
-const app = express()
-
-app.use(express.json())
-app.use(cors())
+app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.send("Welcome to our Jaeyong Shopping Mall API...")
+    res.send("Welcome to our Jaeyong Shopping Mall API...");
+});
 
-})
+app.get("/api/products", (req, res) => {
+    res.json(products);
+});
 
-app.get("/products", (req, res) => {
-    res.send(products);
-})
-
-
-const port = process.env.PORT || 5000
-app.listen(port, console.log(`Server running on port ${port}`))
+exports.api = functions.https.onRequest(app);
