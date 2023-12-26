@@ -5,13 +5,26 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
+  
+}
+
+.App{
+  background-image: url("../public/background2.jpg");
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* 추가: 이미지 반복 없음 */
+  overflow: hidden;
 }
 
 /* nav bar*/
 
 .nav-bar{
   height: 70px;
-  background-color: #3457D5;
+  background: transparent;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,6 +34,7 @@
 .nav-bar a{
   text-decoration: none;
   color: #F0FFFF;
+  text-shadow: 0 0 20px #00fffb, 0 0 40px #00f1bc;
 }
 
 .nav-container{
@@ -97,13 +111,14 @@
 
 .home-container {
   padding: 4rem 4rem;
-  background-color: #F5F5F5;
+ /* 추가: 오버플로우 감추기 */
 }
 .home-container h2{
-  font-size: 40px;
+  text-shadow: 0 0 20px #00fffb, 0 0 40px #00f1bc;
+  font-size: 70px;
   font-weight: 700;
   text-align: center;
-  color: #0070FF;
+  color: #F0FFFF;
   padding-bottom: 2rem;
 }
 .products{
@@ -120,6 +135,21 @@
   }
 }
 
+
+.products-order-button{
+  display: flex;
+  right: 0;
+  margin-right: 10rem;
+  cursor: pointer;
+  
+  border: 2px solid black;
+  position: absolute;
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+
 .product{
   width: 250px;
   max-width: 100%;
@@ -131,8 +161,8 @@
   margin: 1rem auto;
   padding: 1rem;
   border-radius: 15px;
-  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.9),
-  2px 2px 5px rgba(94, 104, 121, 0.9);
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+  2px 2px 5px rgba(94, 104, 121, 0.5);
   background-color: white;
   transition: transform 0.7s ease-out;
 }
@@ -205,6 +235,8 @@
 
 .cart-container{
   padding: 2rem 4rem;
+ color: white;
+ height: 100vh;
 
 }
 
@@ -230,6 +262,7 @@ display: grid;
 align-items: center;
 grid-template-columns: 3fr 1fr 1fr 0fr;
 column-gap: 0.5rem;
+color: white;
 }
 
 .cart-item{
@@ -266,7 +299,7 @@ column-gap: 0.5rem;
   margin-top: 0.7rem;
   cursor: pointer;
   background: none;
-  color: gray;
+  color: white;
 }
 
 .cart-item .cart-product button:hover{
@@ -281,6 +314,7 @@ column-gap: 0.5rem;
   max-width: 100%;
   border: 0.5px solid rgb(177, 177, 177);
   border-radius: 5px;
+  color: white;
 }
 
 .cart-product-quantity button{
@@ -289,6 +323,7 @@ column-gap: 0.5rem;
   background: none;
   padding: 0.7rem 1.5rem;
   cursor: pointer;
+  color: white;
 }
 
 .cart-product-quantity .count{
@@ -320,7 +355,7 @@ column-gap: 0.5rem;
   font-weight: 400;
   letter-spacing: 1.15px;
   border: 0.5px solid rgb(177, 177, 177);
-  color: gray;
+  color: white;
   background: none;
   outline: none;
   cursor: pointer;
@@ -369,7 +404,7 @@ column-gap: 0.5rem;
 
 .continue-shopping a,
 .start-shopping a{
-  color: gray;
+  color: white;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -382,7 +417,7 @@ column-gap: 0.5rem;
 .cart-empty{
   font-size: 20px;
   margin-top: 2rem;
-  color: rgb(84,84,84);
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -391,7 +426,9 @@ column-gap: 0.5rem;
 /*My page*/
 
 .myPage-container{
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
+  color: white;
+  min-height: 100vh;
 }
 
 .myPage-container h2{
@@ -399,6 +436,10 @@ column-gap: 0.5rem;
   font-size: 30px;
   text-align: center;
 
+}
+
+.myPage-container .cart-empty{
+  height: 100vh;
 }
 
 .myPage-container .titles{
@@ -472,11 +513,11 @@ column-gap: 2rem;
   margin-top: 0.7rem;
   cursor: pointer;
   background: none;
-  color: gray;
+  color: white;
 }
 
 .myPage-item .myPage-product button:hover{
-  color:black;
+  color:purple;
 
 }
 
@@ -497,7 +538,7 @@ column-gap: 2rem;
   font-weight: 400;
   letter-spacing: 1.15px;
   border: 0.5px solid rgb(177, 177, 177);
-  color: gray;
+  color: white;
   background: none;
   outline: none;
   cursor: pointer;

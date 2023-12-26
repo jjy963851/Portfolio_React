@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useGetAllProductsQuery } from "../features/productsApi";
 import { addToCart, getTotals } from "../features/cartSlice";
 import Staticdata from "../Staticdata.json"
-
+import { useState } from "react";
 
 const Home = () => {
     const { data, error, isLoading } = useGetAllProductsQuery();
@@ -14,8 +14,20 @@ console.log(data);
         dispatch(getTotals());
     };
 
+    const [products, setProducts] = useState(Staticdata.products);
+    const [isDescending, setIsDescending] = useState(true);
+  
+    const sortByPrice = () => {
+      const sortedProducts = [...Staticdata.products].sort((a, b) =>
+        isDescending ? b.price - a.price : a.price - b.price
+      );
+      setProducts(sortedProducts);
+      setIsDescending(!isDescending);
+    };
+    
     return (
         <div className="home-container">
+          
             {isLoading ? (
                 <p>Loading...</p>
             ) : error ? (
@@ -23,9 +35,13 @@ console.log(data);
             ) : (
                 <>
                     <h2>Projects Mall</h2>
+                    <button onClick = {sortByPrice}className="products-order-button">    {isDescending ? "Sort Ascending":"Sort Descending" }</button>
                     <div className="products">
-                        {Staticdata.products?.map((product) => (
+                   
+                        {products?.map((product) => (
+                            
                             <div key={product.id} className="product">
+                                
                                 <h3>{product.name}</h3>
                                 <img src={product.image} alt={product.name} />
                                 <div className="details">

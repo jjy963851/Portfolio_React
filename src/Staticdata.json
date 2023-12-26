@@ -38,7 +38,7 @@
             "desc": "Next.js React.js Firebase Vercel",
             "desc2": "I frequently cook and enjoy preparing various delicious recipes. I've created a website where I can store and share mouthwatering recipes, including Korean, Japanese, and American dishes, as well as those I've personally crafted. Utilizing Next.js version 13, tailwind.css, and Firebase Realtime Database, the website allows for immediate updates and storage of recipes. Stay tuned for my culinary adventures",
             "price": 520,
-            " image": "https://res.cloudinary.com/dtnuqpfh6/image/upload/v1700678386/Shopping/foodStore_slzwne.png"
+            "image": "https://res.cloudinary.com/dtnuqpfh6/image/upload/v1700678386/Shopping/foodStore_slzwne.png"
         },
         {
             "id": 6,
@@ -63,6 +63,23 @@
             "desc2": "This is my school graduation project. Although I didn't use specific skills in the front-end field, it was a time when I could experience and execute the overall Agile process. From writing the SRS document to creating various diagrams like Class Diagrams and Use Cases, I also wrote a document introducing our project. Additionally, we used Trello to manage various sprints, assigning Story Points and creating Product Burndown charts and Velocity charts after each sprint completion. ",
             "price": 800,
             "image": "https://res.cloudinary.com/dtnuqpfh6/image/upload/v1700679047/Shopping/Orange_game_mainMenu_UI_h1ozor.png"
+        },
+        {
+            "id": 9,
+            "name": "Video Streaming",
+            "desc": "ReactJS CSS Parrallex Desgin",
+            "desc2": "Modern Web Design trend is Parrallex now! Whenever user scroll, contents appear and dissapear. This VideoStreaming project will provide live streaming videos to users. ",
+            "price": 1200,
+            "image": "https://res.cloudinary.com/dtnuqpfh6/image/upload/v1703625830/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2023-12-26_162103_gpkvd3.png"
+        },
+        {
+            "id": 10,
+            "name": "MyCSS",
+            "desc": "HTML, CSS, JavaScript",
+            "desc2": "Best Front-End developer always try new design! This website will include parallex, 3d view style, and slide card design! ",
+            "price": 780,
+            "image": "https://res.cloudinary.com/dtnuqpfh6/image/upload/v1703626100/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2023-12-26_162224_uaboml.png"
         }
     ]
 }
+

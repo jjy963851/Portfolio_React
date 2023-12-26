@@ -125,6 +125,7 @@ const cartSlice = createSlice({
                 position: "bottom-left",
             });
             localStorage.setItem("myPageItems", JSON.stringify(state.myPageItems))
+            localStorage.setItem("cartItems", JSON.stringify(state.cartItems))
         },
         removeFromMyPage(state, action) {
             const nextCartItems = state.myPageItems.filter(
